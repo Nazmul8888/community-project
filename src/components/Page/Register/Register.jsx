@@ -1,14 +1,33 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Hoks/Provider/AuthProvider";
 
 
 
 const Register = () => {
+
+  const {createUser} = useContext(AuthContext)
+
+
+
+
 
     const handelRegister = e=>{
         e.preventDefault()
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+
+        // create user
+
+        createUser(email,password)
+        .then(result=>{
+          console.log(result.user)
+        })
+
+        .catch(error=>{
+          console.log(error)
+        })
 
 
         console.log(name,email,password)
@@ -46,7 +65,7 @@ const Register = () => {
             </div>
 
             </form>
-            <p className="text-center mt-4">Have a Account? please<Link className="text-pink-600" to='/login'> Login
+            <p className="text-center mt-4">Have a Account? please<Link className="text-green-600 font-bold" to='/login'> Login
                 </Link>
              </p>
 

@@ -1,8 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Hoks/Provider/AuthProvider";
 
 
 
 const Login = () => {
+
+   const {signIn,signWithGoogle} = useContext(AuthContext);
+   
+
+
+
 
     const handelLogin = e=>{
         e.preventDefault()
@@ -10,7 +18,30 @@ const Login = () => {
         const password = e.target.password.value;
 
         console.log(email,password)
+
+        signIn(email,password)
+        .then(result=>{
+          console.log(result.user)
+        })
+        .catch(error=>{
+          console.log(error)
+        })
     }
+      const handelGoogleSignIn = ()=>{
+        signWithGoogle()
+        .then(result=>{
+          console.log(result.user)
+        })
+
+        .catch(error=>{
+          console.log(error)
+        })
+      }
+
+
+
+
+
     return (
         <div> 
             <div>
@@ -37,9 +68,12 @@ const Login = () => {
             </div>
 
             </form>
-            <p className="text-center mt-4">Dont have an Account? please<Link className="text-blue-600" to='/register'> Register
+            <div className="flex justify-items-center ">
+            <p className="">Dont have an Account? please<Link className="text-blue-600" to='/register'> Register
                 </Link>
              </p>
+             <p className=""><button  onClick={handelGoogleSignIn} className="btn btn-primary hover:bg-red-600">Google</button></p>
+            </div>
 
 
             </div>
