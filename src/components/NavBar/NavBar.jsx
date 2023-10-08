@@ -28,11 +28,12 @@ const NavBar = () => {
     <li><NavLink to='/login'>LOGIN</NavLink></li>
     <li><NavLink to='/register'>REGISTER</NavLink></li>
     <li><NavLink to='/animation'>ANIMATION</NavLink></li>
+    <li><NavLink to='/contact'> CONTACT US</NavLink></li>
 
 
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-[#E9B824]">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -43,7 +44,7 @@ const NavBar = () => {
         
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">Get Togethers Limited</a>
+    <a className="btn btn-ghost normal-case text-xl"> PALAZZOMAFFEI</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

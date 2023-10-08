@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Hoks/Provider/AuthProvider";
+import { BsGoogle } from 'react-icons/bs';
 
 
 
@@ -68,12 +69,17 @@ const Login = () => {
             </div>
 
             </form>
-            <div className="flex justify-items-center ">
-            <p className="">Dont have an Account? please<Link className="text-blue-600" to='/register'> Register
+            <div className=" flex justify-center space-x-4 items-center py-5 ">
+            <p className=" text-center">Dont have an Account? please<Link className="text-blue-600" to='/register'> Register
                 </Link>
+                
              </p>
-             <p className=""><button  onClick={handelGoogleSignIn} className="btn btn-primary hover:bg-red-600">Google</button></p>
+             <div onClick={handelGoogleSignIn} role="button" className="flex justify-center text-green-500">
+           < BsGoogle size={30}></BsGoogle>
             </div>
+             
+            </div>
+            
 
 
             </div>

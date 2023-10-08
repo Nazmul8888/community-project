@@ -13,6 +13,8 @@ import Register from './components/Page/Register/Register';
 import AuthProvider from './Hoks/Provider/AuthProvider';
 import Services from './components/Page/Services';
 import PrivateRoute from './Hoks/Route/PrivateRoute';
+import ContactUs from './components/Page/Contact/ContactUs';
+import Animation from './components/NavBar/Animation';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,15 +31,24 @@ const router = createBrowserRouter([
 
       },
       {
-        path:'/services/:id',
+        path:'/services/',
         element: <PrivateRoute><Services></Services></PrivateRoute>,
-        loader: ()=> fetch('/event.json'),
+        loader: ()=> fetch('/categories.json'),
         
       },
       {
         path: '/register',
         element: <Register></Register>
       },
+      {
+        path:'/contact',
+        element: <ContactUs></ContactUs>,
+      },
+      {
+        path: '/animation',
+        element: <Animation></Animation>,
+      },
+     
     ]
   },
 ]);
