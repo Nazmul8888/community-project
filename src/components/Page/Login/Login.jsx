@@ -25,7 +25,7 @@ const Login = () => {
           console.log(result.user)
         })
         .catch(error=>{
-          console.log(error)
+          console.log(error) 
         })
     }
       const handelGoogleSignIn = ()=>{
