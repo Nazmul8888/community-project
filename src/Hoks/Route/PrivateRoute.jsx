@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Navigate } from "react-router-dom";
 
+// This is Route Section
 
 const PrivateRoute = ({children}) => {
 

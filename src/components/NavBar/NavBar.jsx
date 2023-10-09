@@ -1,3 +1,6 @@
+
+
+
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Hoks/Provider/AuthProvider";
@@ -20,14 +23,13 @@ const NavBar = () => {
   }
 
 
-
+//  * This Is NabBar Section
 
     const navLinks = <>
-    <li><NavLink to='/'>PROJECTS</NavLink></li>
+    <li><NavLink to='/'>HOME</NavLink></li>
     <li><NavLink to='/services'>SERVICES</NavLink></li>
     <li><NavLink to='/login'>LOGIN</NavLink></li>
     <li><NavLink to='/register'>REGISTER</NavLink></li>
-    <li><NavLink to='/animation'>ANIMATION</NavLink></li>
     <li><NavLink to='/contact'> CONTACT US</NavLink></li>
 
 
@@ -44,7 +46,7 @@ const NavBar = () => {
         
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl"> PALAZZOMAFFEI</a>
+    <a className="btn btn-ghost normal-case text-xl"> Community and Cultural Events Ltd.</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

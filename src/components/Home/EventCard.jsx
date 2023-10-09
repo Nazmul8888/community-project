@@ -11,7 +11,7 @@ const EventCard = ({event}) => {
 
         <div className="card  bg-base-100 shadow-xl  ">
       
-      <figure><img src={images} alt="Shoes" /></figure>
+      <figure><img src={images} alt=""  /></figure>
       <div className="card-body">
         <h2 className="card-title">
          {title}

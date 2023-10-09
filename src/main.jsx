@@ -14,7 +14,8 @@ import AuthProvider from './Hoks/Provider/AuthProvider';
 import Services from './components/Page/Services';
 import PrivateRoute from './Hoks/Route/PrivateRoute';
 import ContactUs from './components/Page/Contact/ContactUs';
-import Animation from './components/NavBar/Animation';
+import CarsoulHero from './components/CarsoulHero/CarsoulHero';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,9 +46,10 @@ const router = createBrowserRouter([
         element: <ContactUs></ContactUs>,
       },
       {
-        path: '/animation',
-        element: <Animation></Animation>,
+        path: '/carsoul',
+        element: <CarsoulHero></CarsoulHero>,
       },
+      
      
     ]
   },

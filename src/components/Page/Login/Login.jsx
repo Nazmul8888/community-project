@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Hoks/Provider/AuthProvider";
-import { BsGoogle } from 'react-icons/bs';
+import { BsGoogle  } from 'react-icons/bs';
 
 
 
@@ -48,7 +48,7 @@ const Login = () => {
             <div>
             <h2 className=" text-3xl my-10 text-center">Please Login</h2>
 
-            <form onSubmit={handelLogin} className="md:w-3/4 lg:w-1/2 mx-auto" >
+            <form onSubmit={handelLogin} className="md:w-3/4 lg:w-1/2 mx-auto " >
             <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
